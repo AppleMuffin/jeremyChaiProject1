@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap"
     rel="stylesheet">
+    <script src="https://kit.fontawesome.com/86e4cfb6fd.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- skip link -->
@@ -37,11 +38,12 @@
       <ul class="navRight">
         <li><a href="">Shop</a></li>
         <li><a href="">Contact</a></li>
-        <button class="searchIcon">
-          <!-- fontawesome here -->
+        <button class="search">
+          <i class="fa-solid fa-magnifying-glass searchIcon"></i>
         </button>
-        <button class="Shop">
-          <!-- fontawesome here -->
+        <button class="shop">
+          <i class="fa-solid fa-bag-shopping shopIcon"></i>
+          <p>0</p>
         </button>
       </ul>
       <!-- right navbar end -->
@@ -52,10 +54,12 @@
   <!-- header begins -->
   <header>
     <div class="wrapper">
-
+      <img src="./assets/home-1.jpeg" alt="A modern style desktop">
     </div>
   </header>
   <!-- header ends -->
+
+<!-- note the lines you need to add later -->
 
   <!-- main begins -->
   <main id="mainContent">
@@ -64,14 +68,18 @@
     <section class="branding">
       <div class="wrapper"> 
         <div class="brandingContainer">
+          <img src="./assets/home-2.jpeg" alt="A work desk with a computer, and calendar in the background">
+          <img class="circleText" src="./assets/home-circle-text.png" alt="the phrase 'branding and website pros' arranged in a circle">
         </div>
-        <div class="textContainer">
-          <h2>Branding</h2>
-          <p>Venture first mover advantage incubator metrics focus backing business-to-consumer.</p>
-        </div>
-        <div class="textContainer">
-          <h2>Design & Develop</h2>
-          <p>Venture first mover advantage incubator metrics focus backing business-to-consumer.</p>
+        <div class="brandingInfoParent">
+          <div class="textContainer">
+            <h2>Branding</h2>
+            <p>Venture first mover advantage incubator metrics focus backing business-to-consumer.</p>
+          </div>
+          <div class="textContainer">
+            <h2>Design & Develop</h2>
+            <p>Venture first mover advantage incubator metrics focus backing business-to-consumer.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -80,12 +88,16 @@
     <!-- info section start -->
     <section class="info">
       <div class="wrapper">
-        <button class="infoLeft"></button>
+        <button class="infoLeft">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
         <div class="infoContainer">
-          <img src="" alt="">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique nisi error maiores sequi iure fugit harum vero nostrum exercitationem? Tenetur mollitia fuga nostrum, porro dicta ratione harum ducimus. Iure, debitis?</p>
+          <img src="./assets/home-3.jpeg" alt="a black and white photo of a man without a shirt. There is illegible text describing him">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique nisi error maiores sequi iure fugit harum vero nostrum exercitationem? Tenetur mollitia fuga nostrum, porro dicta ratione harum ducimus. Iure, debitis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque consequuntur esse, aliquid eius eveniet dolore corporis earum dolor reiciendis aperiam commodi quisquam facere neque nam minus aut nemo magni. Provident.</p>
         </div>
-        <button class="infoRight"></button>
+        <button class="infoRight">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
     </section>
     <!-- info section end -->
@@ -94,32 +106,64 @@
     <!-- about product section start -->
     <section class="aboutProduct">
       <div class="wrapper">
-        <div class="aboutContainer">
-          <div class="aboutTextContainer">
-            <h2>Unique Design</h2>
-            <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
-          </div>
-          <div class="aboutTextContainer">
-            <h2>SEO Marketing</h2>
-            <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
-          </div>
-          <div class="aboutTextContainer">
-            <h2>Retina Ready</h2>
-            <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
-          </div>
-          <div class="aboutTextContainer">
-            <h2>ECommerce Ready</h2>
-            <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
-          </div>
-          <div class="aboutTextContainer">
-            <h2>Advanced Options</h2>
-            <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
-          </div>
-          <div class="aboutTextContainer">
-            <h2>Customizable</h2>
-            <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
-          </div>
-        </div>
+        <ul class="aboutContainer">
+
+          <li class="aboutBox">
+            <!-- hide font awesome icons for sr -->
+            <div class="iconContainer">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="aboutTextContainer">
+              <h2>Unique Design</h2>
+              <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
+            </div>
+          </li>
+          <li class="aboutBox">
+            <div class="iconContainer">
+              <i class="fa-solid fa-map-pin"></i>
+            </div>
+            <div class="aboutTextContainer">
+              <h2>SEO Marketing</h2>
+              <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
+            </div>
+          </li>
+          <li class="aboutBox">
+            <div class="iconContainer">
+              <i class="fa-solid fa-desktop"></i>
+            </div>
+            <div class="aboutTextContainer">
+              <h2>Retina Ready</h2>
+              <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
+            </div>
+          </li>
+          <li class="aboutBox">
+            <div class="iconContainer">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <div class="aboutTextContainer">
+              <h2>ECommerce Ready</h2>
+              <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
+            </div>
+          </li>
+          <li class="aboutBox">
+            <div class="iconContainer">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <div class="aboutTextContainer">
+              <h2>Advanced Options</h2>
+              <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
+            </div>
+          </li>
+          <li class="aboutBox">
+            <div class="iconContainer">
+              <i class="fa-solid fa-face-smile"></i>
+            </div>
+            <div class="aboutTextContainer">
+              <h2>Customizable</h2>
+              <p>Twitter validation first mover advantage advisor angel investor beta churn rate low hanging fruit burn</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     <!-- about product section end -->

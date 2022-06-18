@@ -238,6 +238,7 @@ h1 {
   font-size: 1.7rem;
   letter-spacing: 0.9px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 h2, h3 {
@@ -246,6 +247,7 @@ h2, h3 {
   line-height: 24px;
   letter-spacing: 1.8px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 nav {
@@ -266,4 +268,214 @@ button {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+}
+
+ul,
+li,
+a,
+input {
+  margin: 0%;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 10;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+nav {
+  background-color: #F6F6F6;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h1 {
+  display: inline-block;
+}
+
+.navLeft, .navRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 200px;
+  text-transform: uppercase;
+}
+
+.search, .shop {
+  background-color: transparent;
+  border: none;
+}
+.search i, .shop i {
+  font-size: 0.9rem;
+}
+
+.shop {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.shop p {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  background-color: #C3DAB7;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.branding {
+  background-color: #C3DAB7;
+}
+
+.branding .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.branding .wrapper .brandingContainer {
+  padding-top: 200px;
+  padding-bottom: 75px;
+  position: relative;
+}
+.branding .wrapper .brandingContainer .circleText {
+  position: absolute;
+  top: 90px;
+  left: -125px;
+}
+
+.brandingInfoParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 100px;
+}
+.brandingInfoParent .textContainer {
+  width: 30%;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.info {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #FFFFFF;
+}
+.info .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+.infoContainer img {
+  border-radius: 50%;
+  padding-bottom: 20px;
+}
+
+.infoLeft, .infoRight {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+}
+
+.aboutProduct {
+  background-image: url(../assets/home-4.jpeg);
+  background-repeat: no-repeat;
+  padding: 250px 0;
+}
+.aboutProduct .wrapper {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.aboutContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+}
+.aboutContainer .aboutBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(50% - 60px);
+  margin-right: 60px;
+}
+.aboutContainer .aboutBox .iconContainer {
+  width: 30px;
+}
+.aboutContainer .aboutBox i {
+  font-size: 2rem;
+  max-width: 100%;
 }

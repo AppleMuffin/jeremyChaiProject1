@@ -1,0 +1,59 @@
+.skip-link {
+  position: absolute;
+  left: -1000px; //take it off the screen
+  top: 5px; //bring it off the edge of the screen
+  z-index: 10;
+  &:focus {
+    left: 0;
+  }
+}
+
+nav {
+  background-color: $whiteTwo;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+h1 {
+  display: inline-block;
+}
+
+
+.navLeft, .navRight {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  text-transform: uppercase;
+}
+
+// nav icon styles
+.search, .shop {
+  background-color: transparent;
+  border: none;
+  i {
+    font-size: 0.9rem;
+  }
+}
+
+.shop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  p {
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    background-color: $lightSage;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+  }
+}
+

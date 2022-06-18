@@ -1,0 +1,95 @@
+// branding section styles start
+.branding {
+  background-color: $lightSage;
+}
+
+.branding .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .brandingContainer {
+    padding-top: 200px;
+    padding-bottom: 75px;
+    position: relative;
+    .circleText {
+      position: absolute;
+      top: 90px;
+      left: -125px;
+    }
+  }
+ 
+}
+
+.brandingInfoParent {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+  .textContainer {
+    width: 30%;
+    text-align: center;
+    margin-right: 20px;
+    }
+}
+
+// branding section styles end
+
+// info section styling start
+.info {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $white;
+  .wrapper {
+    display: flex;
+  }
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-basis: 70%;
+  img {
+    border-radius: 50%;
+    padding-bottom: 20px;
+  }
+}
+
+.infoLeft, .infoRight {
+  flex-basis: 15%;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+}
+// info section styling end
+
+// about product styling start
+.aboutProduct {
+  background-image: url(../assets/home-4.jpeg);
+  background-repeat: no-repeat;
+  padding: 250px 0;
+  .wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.aboutContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  .aboutBox {
+    display: flex;
+    width: calc((100% / 2) - 60px);
+    margin-right: 60px;
+    .iconContainer {
+      width: 30px;
+    }
+    i {
+      font-size: 2rem;
+      max-width: 100%;
+    }
+  }
+}
+// about product styling end
