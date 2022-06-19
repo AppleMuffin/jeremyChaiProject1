@@ -1,0 +1,14 @@
+header {
+  position: relative
+}
+
+header::after {
+  content: "";
+  width: 1px;
+  height: 10vh;
+  background: red;
+  position: absolute;
+  right: 50%;
+  bottom: -60px;
+  z-index: 10;
+}

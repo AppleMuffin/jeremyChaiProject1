@@ -361,6 +361,21 @@ h1 {
   text-align: center;
 }
 
+header {
+  position: relative;
+}
+
+header::after {
+  content: "";
+  width: 1px;
+  height: 10vh;
+  background: red;
+  position: absolute;
+  right: 50%;
+  bottom: -60px;
+  z-index: 10;
+}
+
 .branding {
   background-color: #C3DAB7;
 }
@@ -466,16 +481,44 @@ h1 {
   width: 50%;
 }
 .aboutContainer .aboutBox {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: calc(50% - 60px);
   margin-right: 60px;
 }
-.aboutContainer .aboutBox .iconContainer {
-  width: 30px;
-}
 .aboutContainer .aboutBox i {
-  font-size: 2rem;
-  max-width: 100%;
+  border: 5px solid red;
+  border-radius: 50%;
+}
+
+.meet .wrapper h2 {
+  text-align: center;
+}
+
+.meetContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.meetContainer .teamPlayer {
+  min-width: 550px;
+  max-width: 550px;
+  margin-right: 10px;
+}
+.meetContainer .imgProfileBox {
+  min-width: calc(25% - 10px);
+  margin: 10px 10px 0px 0px;
+}
+.meetContainer .work {
+  height: 270px;
+  width: 270px;
+  margin-top: 10px;
+  margin-left: 10px;
 }

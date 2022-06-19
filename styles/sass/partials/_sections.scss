@@ -80,16 +80,43 @@
   flex-wrap: wrap;
   width: 50%;
   .aboutBox {
+    position: relative;
     display: flex;
     width: calc((100% / 2) - 60px);
     margin-right: 60px;
-    .iconContainer {
-      width: 30px;
-    }
     i {
-      font-size: 2rem;
-      max-width: 100%;
+      border: 5px solid red;
+      border-radius: 50%;
     }
+}
+}
+
+// about product styling end
+
+// meet our team styling start
+.meet .wrapper h2 {
+  text-align: center;
+}
+
+.meetContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .teamPlayer{
+    min-width: calc((270px *2) + 10px);
+    max-width: calc((270px *2) + 10px);
+    margin-right: 10px;
+  }
+  .imgProfileBox {
+    min-width: calc((100% / 4) - 10px);
+    margin: 10px 10px 0px 0px;
+  }
+  .work {
+    height: 270px;
+    width: 270px;  
+    margin-top: 10px;
+    margin-left: 10px;
   }
 }
-// about product styling end
+// meet our team styling end
