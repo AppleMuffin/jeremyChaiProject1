@@ -528,6 +528,9 @@ header::after {
           justify-content: space-between;
   margin-bottom: 40px;
 }
+.teamContainer h3 {
+  padding-bottom: 20px;
+}
 .teamContainer .teamPlayers {
   -ms-flex-preferred-size: 580px;
       flex-basis: 580px;
@@ -594,6 +597,7 @@ header::after {
 .dropALine .wrapper .textContainer p {
   max-width: 50%;
   text-align: center;
+  padding-bottom: 20px;
 }
 .dropALine .wrapper .imgContainer {
   width: 50%;
@@ -603,4 +607,92 @@ header::after {
      object-fit: cover;
   height: auto;
   width: 100%;
+}
+
+footer {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.contactBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.contactBox .textContainer {
+  padding: 100px 0;
+}
+.contactBox .textContainer h3 {
+  padding-bottom: 50px;
+}
+
+.socials a i {
+  padding: 20px 15px 0px 0px;
+  font-size: 1rem;
+}
+
+.recentPosts li {
+  list-style: disc;
+}
+
+.twitter h3 {
+  text-align: end;
+}
+.twitter form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footerLogo p {
+  text-align: center;
+  padding: 40px 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-top: 1px solid rgb(73, 72, 72);
+}
+
+.subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+.subscribe input {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  border: none;
+}
+.subscribe input::-webkit-input-placeholder {
+  font-size: large;
+}
+.subscribe input::-moz-placeholder {
+  font-size: large;
+}
+.subscribe input:-ms-input-placeholder {
+  font-size: large;
+}
+.subscribe input::-ms-input-placeholder {
+  font-size: large;
+}
+.subscribe input::placeholder {
+  font-size: large;
+}
+.subscribe button {
+  background-color: #C3DAB7;
 }

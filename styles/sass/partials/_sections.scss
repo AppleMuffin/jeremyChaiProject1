@@ -119,6 +119,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 40px;
+  h3 {
+    padding-bottom: 20px;
+  }
   .teamPlayers {
     flex-basis: 580px;
     height: 270px;
@@ -159,6 +162,7 @@
     p {
       max-width: 50%;
       text-align: center;
+      padding-bottom: 20px;
     }
     
   }
@@ -171,8 +175,5 @@
     }
   }
 }
-
-
-  
 
 // portfolio (drop us a line) section style end
