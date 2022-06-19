@@ -66,12 +66,24 @@
 // about product styling start
 .aboutProduct {
   background-image: url(../assets/home-4.jpeg);
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 250px 0;
+  position: relative;
   .wrapper {
     max-width: 100%;
     display: flex;
     justify-content: flex-end;
+  }
+  &::after {
+    content: "";
+    width: 1px;
+    height: 8vh;
+    background: lightgrey;
+    position: absolute;
+    right: 50%;
+    bottom: -60px;
+    z-index: 10;
   }
 }
 
@@ -94,29 +106,73 @@
 // about product styling end
 
 // meet our team styling start
-.meet .wrapper h2 {
-  text-align: center;
+.meetTheTeam {
+  margin-bottom: 100px;
+  h2 {
+    text-align: center;
+    margin: 100px 0;
+  }
 }
 
-.meetContainer {
+.teamContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-
-  .teamPlayer{
-    min-width: calc((270px *2) + 10px);
-    max-width: calc((270px *2) + 10px);
-    margin-right: 10px;
-  }
-  .imgProfileBox {
-    min-width: calc((100% / 4) - 10px);
-    margin: 10px 10px 0px 0px;
-  }
-  .work {
+  justify-content: space-between;
+  margin-bottom: 40px;
+  .teamPlayers {
+    flex-basis: 580px;
     height: 270px;
-    width: 270px;  
-    margin-top: 10px;
-    margin-left: 10px;
+    background-color: $whiteTwo;
+    padding: 25px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .workWithUs {
+    flex-basis: 270px;
+    height: 270px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .imgContainer {
+    flex-basis: 270px;
+    margin-bottom: 40px;
   }
 }
+
 // meet our team styling end
+
+// portfolio (drop us a line) section style start
+.dropALine .wrapper {
+  max-width: 100%;
+  display: flex;
+  .textContainer {
+    background-color: $lightSage;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    p {
+      max-width: 50%;
+      text-align: center;
+    }
+    
+  }
+  .imgContainer {
+    width: 50%;
+    img {
+    object-fit: cover;
+    height: auto; //remember this in the future: setting height auto and witdh 100% allows it to grow responsively
+    width: 100%;
+    }
+  }
+}
+
+
+  
+
+// portfolio (drop us a line) section style end
