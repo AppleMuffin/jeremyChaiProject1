@@ -333,7 +333,11 @@ h1 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
   text-transform: uppercase;
 }
 
@@ -356,8 +360,8 @@ h1 {
 }
 .shop p {
   position: absolute;
-  bottom: -20px;
-  right: -10px;
+  bottom: 0px;
+  right: 0px;
   background-color: #C3DAB7;
   border-radius: 50%;
   width: 20px;
@@ -368,12 +372,21 @@ h1 {
 header {
   position: relative;
 }
+header .wrapper {
+  max-width: 100%;
+}
+header img {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 header::after {
   content: "";
   width: 1px;
   height: 8vh;
-  background: lightgrey;
+  background: rgb(172, 169, 169);
   position: absolute;
   right: 50%;
   bottom: -60px;
