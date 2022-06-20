@@ -117,32 +117,36 @@
 .teamContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center; //space around would increase the margins and make the tile misaligned from the grid
+  max-width: 1160px; //a picture is 270px, margin of 10px was added on left and right = 290px, 4 tiles max per row as seen on the example = 270+20=290*4=1160px. team container is set at this width so only 4 tiles max can be on a row
   margin-bottom: 40px;
-  h3 {
-    padding-bottom: 20px;
-  }
+  
   .teamPlayers {
-    flex-basis: 580px;
+    position: relative; //instead of using flexbox to align a single element, learn how to do it otherwise (google hot to center text vertically)
+    flex-basis: calc(2 * 270px + 20px); //according to the example, this section is 2 tiles long PLUS their margin therefore 270px * 2 + 20px. this will give it exactly the space of two tiles
     height: 270px;
     background-color: $whiteTwo;
-    padding: 25px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+    margin: 10px;
+    .textBlurb {
+      padding: 25px 25px; //more text aligning without flexbox
+      position: absolute;
+      bottom: 0;
+      h3 {
+          margin-bottom: 20px;
+      }
+    }
   }
   .workWithUs {
-    flex-basis: 270px;
+    flex-basis: 270px; //try avoiding flex to align text vertically.
     height: 270px;
     text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
+    margin: 10px;
+    // conclusion -> margin, flexbasis and max-width are important for getting specific pixel perfect alignments (alongside calc())
   }
   .imgContainer {
-    flex-basis: 270px;
-    margin-bottom: 40px;
+    flex: 0 2 270px; //grow/shrink/flex-basis. shrink isnt really used here because its preferred to have less photos per row rather than have photos shrink and be difficult to see
+    margin: 10px;
   }
 }
 
@@ -175,5 +179,60 @@
     }
   }
 }
-
 // portfolio (drop us a line) section style end
+
+// start contact section style
+.contactHeader .wrapper {
+  max-width: 100%;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.contactDetails .wrapper {
+  position: relative;
+
+  h2 {
+    // position: absolute;
+    @include headerStyle;
+  }
+
+  >p {
+    width: 50%;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+
+  .contactBox {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 50px;
+    margin: 25px 0;
+
+    i {
+      font-size: 40px;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      font-weight: bolder;
+      letter-spacing: 5px;
+      margin: 10px 0;
+    }
+  }
+}
+
+.contactBox.address {
+  border-left: 3px solid grey;
+  border-right: 3px solid grey; //could go back and do ::before and ::after
+
+}
+// end contact section style
+
+// get in touch section start
+
+// get in touch section end

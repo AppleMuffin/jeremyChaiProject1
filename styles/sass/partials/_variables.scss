@@ -7,5 +7,14 @@ $black: #333333;
 // font size default
 $baseFont: 1rem;
 
-// font families
+//mixins
+
+@mixin headerStyle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  
+}
 

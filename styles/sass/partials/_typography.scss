@@ -14,11 +14,7 @@ body {
 
 // logo style
 h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.7rem;
-  letter-spacing: 0.9px;
-  font-weight: 700;
-  text-transform: uppercase;
+  @include headerStyle;
 }
 
 // secondary and tertiary heading styles
