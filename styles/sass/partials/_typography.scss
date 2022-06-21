@@ -5,11 +5,7 @@ html {
 
 // body style
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.7rem;
-  line-height: 24px;
-  letter-spacing: 0.3px;
-  font-weight: 400;
+  @include bodyStyle
 }
 
 // logo style

@@ -92,21 +92,21 @@
   <!-- get in touch section starts -->
   <section class="getInTouch">
     <div class="wrapper">
-      <div class="getInTouch">
+      <div class="getInTouchBox">
         <h3>Get in touch with us</h3>
         <p>If you have any questions, please don't hesitate to send us a message</p>
         <form action="">
           <div class="commentInfo">
-            <label for=""></label>
+            <label for="name" class="sr-only">Enter your name</label>
             <!--make sr only -->
-            <input type="text">
-            <label for=""></label>
-            <input type="email">
-            <label for=""></label>
-            <input type="text">
+            <input type="text" placeholder="Enter your name..." id="name">
+            <label for="email" class="sr-only">youremail@domain.com</label>
+            <input type="email" placeholder="youremail@domain.com" id="email">
+            <label for="subject" class="sr-only">subject (Optional)</label>
+            <input type="text" placeholder="Subject (Optional)" id="subject">
           </div>
-          <label for=""></label>
-          <input type="text">
+          <label for="message" class="sr-only">Here goes your message</label>
+          <textarea id="message" cols="30" rows="10" placeholder="Here goes your message"></textarea>
           <button>Send Message</button>
         </form>
       </div>

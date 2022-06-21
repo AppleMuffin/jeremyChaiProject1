@@ -1,0 +1,29 @@
+//form styles start
+input, textarea {
+  margin: 50px 10px;
+  border: none;
+  border-bottom: 1px grey solid;
+  &:focus {
+    border-bottom: 3px grey solid;
+    outline: none;
+  }
+  @include bodyStyle;
+}
+
+input {
+  width: calc((100% / 3) - 20px);
+  padding-bottom: 5px;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+button {
+  margin: 0 0 20px 0;
+  padding: 0;
+  border-bottom: 1px solid grey;
+}
+
+//form styles end

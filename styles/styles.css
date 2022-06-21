@@ -670,6 +670,19 @@ h1 {
   border-right: 3px solid grey;
 }
 
+.getInTouchBox {
+  margin: 20px 0;
+}
+
+.commentInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 footer {
   background-color: #333333;
   color: #FFFFFF;
@@ -756,4 +769,35 @@ p {
 }
 .subscribe button {
   background-color: #C3DAB7;
+}
+
+input, textarea {
+  margin: 50px 10px;
+  border: none;
+  border-bottom: 1px grey solid;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+}
+input:focus, textarea:focus {
+  border-bottom: 3px grey solid;
+  outline: none;
+}
+
+input {
+  width: calc(33.3333333333% - 20px);
+  padding-bottom: 5px;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+button {
+  margin: 0 0 20px 0;
+  padding: 0;
+  border-bottom: 1px solid grey;
 }
