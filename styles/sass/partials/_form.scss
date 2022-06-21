@@ -1,5 +1,5 @@
 //form styles start
-input, textarea {
+.contactUsForm input, textarea {
   margin: 50px 10px;
   border: none;
   border-bottom: 1px grey solid;
@@ -10,7 +10,7 @@ input, textarea {
   @include bodyStyle;
 }
 
-input {
+form.contactUsFormn input {
   width: calc((100% / 3) - 20px);
   padding-bottom: 5px;
 }
@@ -20,7 +20,7 @@ textarea {
   resize: none;
 }
 
-button {
+button.contactSubmit {
   margin: 0 0 20px 0;
   padding: 0;
   border-bottom: 1px solid grey;

@@ -372,6 +372,7 @@ h1 {
   width: 20px;
   height: 20px;
   text-align: center;
+  line-height: 1rem;
 }
 
 .mainHeader {
@@ -391,10 +392,18 @@ h1 {
   z-index: 10;
 }
 .mainHeader img {
-  height: auto;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.contactHeader .wrapper, .heroImage .wrapper {
+  max-width: 100%;
+}
+.contactHeader img, .heroImage img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 .branding {
@@ -518,12 +527,32 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: calc(50% - 60px);
-  margin-right: 60px;
+  margin: 30px 20px 0 0;
 }
-.aboutContainer .aboutBox i {
-  border: 5px solid red;
+.aboutContainer .aboutBox .aboutTextContainer {
+  width: 70%;
+}
+.aboutContainer .aboutBox .iconContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 3px solid black;
   border-radius: 50%;
+  margin: 20px 20px 0 0;
+}
+.aboutContainer .aboutBox .iconContainer i {
+  font-size: x-large;
 }
 
 .meetTheTeam {
@@ -632,6 +661,26 @@ h1 {
   letter-spacing: 0.9px;
   font-weight: 700;
   text-transform: uppercase;
+  word-wrap: break-word;
+  width: 300px;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  position: relative;
+  top: -85px;
+  margin: 0;
+}
+.contactDetails .wrapper h2:before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  display: inline-block;
+  width: 10%;
+  border: 3px solid black;
+}
+.contactDetails .wrapper h3 {
+  font-weight: bolder;
+  letter-spacing: 1px;
+  padding: 0 0 25px 0;
 }
 .contactDetails .wrapper > p {
   width: 50%;
@@ -666,8 +715,8 @@ h1 {
 }
 
 .contactBox.address {
-  border-left: 3px solid grey;
-  border-right: 3px solid grey;
+  border-left: 2px solid lightgrey;
+  border-right: 2px solid lightgrey;
 }
 
 .getInTouchBox {
@@ -771,7 +820,7 @@ p {
   background-color: #C3DAB7;
 }
 
-input, textarea {
+.contactUsForm input, textarea {
   margin: 50px 10px;
   border: none;
   border-bottom: 1px grey solid;
@@ -781,12 +830,12 @@ input, textarea {
   letter-spacing: 0.3px;
   font-weight: 400;
 }
-input:focus, textarea:focus {
+.contactUsForm input:focus, textarea:focus {
   border-bottom: 3px grey solid;
   outline: none;
 }
 
-input {
+form.contactUsFormn input {
   width: calc(33.3333333333% - 20px);
   padding-bottom: 5px;
 }
@@ -796,7 +845,7 @@ textarea {
   resize: none;
 }
 
-button {
+button.contactSubmit {
   margin: 0 0 20px 0;
   padding: 0;
   border-bottom: 1px solid grey;

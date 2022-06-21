@@ -94,11 +94,24 @@
   .aboutBox {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     width: calc((100% / 2) - 60px);
-    margin-right: 60px;
-    i {
-      border: 5px solid red;
+    margin: 30px 20px 0 0;
+    .aboutTextContainer {
+      width: 70%
+    }
+    .iconContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+      border: 3px solid black;
       border-radius: 50%;
+      margin: 20px 20px 0 0;
+      i {
+        font-size: x-large;
+      }
     }
 }
 }
@@ -196,8 +209,28 @@
   h2 {
     // position: absolute;
     @include headerStyle;
-  }
+    word-wrap: break-word;
+    width: 300px;
+    line-height: 3rem;
+    font-size: 2.5rem;
+    position: relative;
+    top: -85px;
+    margin: 0;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      display: inline-block;
+      width: 10%;
+      border: 3px solid black; 
+    }
 
+  }
+  h3 {
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding: 0 0 25px 0;
+  }
   >p {
     width: 50%;
   }
@@ -227,8 +260,8 @@
 }
 
 .contactBox.address {
-  border-left: 3px solid grey;
-  border-right: 3px solid grey; //could go back and do ::before and ::after
+  border-left: 2px solid lightgrey;
+  border-right: 2px solid lightgrey; //could go back and do ::before and ::after
 
 }
 // end contact section style

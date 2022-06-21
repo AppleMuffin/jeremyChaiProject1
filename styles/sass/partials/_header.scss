@@ -15,9 +15,19 @@
   }
   
   img {
-    height: auto;
     width: 100%;
     object-fit: cover;
   }
 }
 
+
+.contactHeader, .heroImage {
+  .wrapper {
+    max-width: 100%;
+
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
