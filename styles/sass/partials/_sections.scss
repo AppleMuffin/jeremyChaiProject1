@@ -169,6 +169,7 @@
 .dropALine .wrapper {
   max-width: 100%;
   display: flex;
+  width: 100%;
   .textContainer {
     background-color: $lightSage;
     display: flex;
@@ -253,7 +254,7 @@
     h4 {
       text-transform: uppercase;
       font-weight: bolder;
-      letter-spacing: 5px;
+      letter-spacing: 10px;
       margin: 10px 0;
     }
   }
@@ -276,5 +277,122 @@
   display: flex;
   justify-content: space-between;
 }
-
 // get in touch section end
+
+//blog styling start
+.blog, .comments, .leaveAComment , .relatedPosts{
+  h2 {
+    @include headerStyle;
+  }
+}
+
+.blog h2 {
+  margin: 100px 0 20px 0;
+  font-size: 2.5rem;
+}
+
+.articleInformation, .author, .writerHeading, .nameBox{
+  display: flex;
+  h3{
+    font-size: 1.1rem;
+  }
+}
+
+.writerHeading, .relatedPosts h2, .comments h2, .leaveAComment h2 {
+
+  border-bottom: 1px solid grey;
+  padding: 75px 0 20px 0;
+}
+
+.author {
+  flex-basis: 40%;
+  img {
+    max-width: 25%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .nameBox {
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: center;
+  }
+}
+
+.author, .articleInformation {
+  p {
+    color: grey;
+  }
+}
+
+.articleInformation {
+  flex-basis: 60%;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.articleContent {
+  p {
+    margin: 20px 0;
+  }
+}
+
+div.socials {
+  display: flex;
+  align-items: center;
+  a i {
+    padding: 0 15px 0 0;
+  }
+  p {
+    margin: 0 15px 0 0;
+  }
+}
+
+.postsContainer {
+  display: flex;
+  justify-content: space-between;
+  .posts {
+    flex-basis: 32%; //really clever use of flex basis (that i googled lol) to give nice margins easily
+    p {
+      padding: 20px 0 0 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.commentBox {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  img {
+    width: 70px;
+    height: 70px;
+  }
+  .textContainer {
+    padding: 15px 20px 30px 20px;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 90%;
+    position: relative;
+    &::before {
+      content: '';
+      height: 0;
+      width: 0;
+      border-top: solid transparent 10px;
+      border-left: solid transparent 10px;
+      border-right: solid lightgrey 25px;
+      border-bottom: solid transparent 10px;
+      position: absolute;
+      left: -33px;
+    }
+    div {
+      display: flex;
+      h4 {
+        margin: 0 10px 0 0;
+      }
+
+    }
+  }
+}
+

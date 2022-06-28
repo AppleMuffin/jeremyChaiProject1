@@ -1,8 +1,6 @@
+//main header styles start
 .mainHeader {
   position: relative;
-  .wrapper {
-    max-width: 100%;
-  }
   &::after {
     content: "";
     width: 1px;
@@ -16,14 +14,16 @@
   
   img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
+//main header styles end
 
-
-.contactHeader, .heroImage {
+//contact and blog header styles start
+.contactHeader, .heroImage,  .blogHeader {
   .wrapper {
-    max-width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 
   }
   img {
@@ -31,3 +31,5 @@
     width: 100%;
   }
 }
+//contact and blog header styles end
+

@@ -271,7 +271,7 @@ button {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
 }
 
 ul,
@@ -316,8 +316,9 @@ nav .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -378,9 +379,6 @@ h1 {
 .mainHeader {
   position: relative;
 }
-.mainHeader .wrapper {
-  max-width: 100%;
-}
 .mainHeader::after {
   content: "";
   width: 1px;
@@ -393,14 +391,15 @@ h1 {
 }
 .mainHeader img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-.contactHeader .wrapper, .heroImage .wrapper {
-  max-width: 100%;
+.contactHeader .wrapper, .heroImage .wrapper, .blogHeader .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.contactHeader img, .heroImage img {
+.contactHeader img, .heroImage img, .blogHeader img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -611,6 +610,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 .dropALine .wrapper .textContainer {
   background-color: #C3DAB7;
@@ -710,7 +710,7 @@ h1 {
 .contact .contactBox h4 {
   text-transform: uppercase;
   font-weight: bolder;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   margin: 10px 0;
 }
 
@@ -730,6 +730,152 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.blog h2, .comments h2, .leaveAComment h2, .relatedPosts h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.blog h2 {
+  margin: 100px 0 20px 0;
+  font-size: 2.5rem;
+}
+
+.articleInformation, .author, .writerHeading, .nameBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.articleInformation h3, .author h3, .writerHeading h3, .nameBox h3 {
+  font-size: 1.1rem;
+}
+
+.writerHeading, .relatedPosts h2, .comments h2, .leaveAComment h2 {
+  border-bottom: 1px solid grey;
+  padding: 75px 0 20px 0;
+}
+
+.author {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+.author img {
+  max-width: 25%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.author .nameBox {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.author p, .articleInformation p {
+  color: grey;
+}
+
+.articleInformation {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.articleContent p {
+  margin: 20px 0;
+}
+
+div.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+div.socials a i {
+  padding: 0 15px 0 0;
+}
+div.socials p {
+  margin: 0 15px 0 0;
+}
+
+.postsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.postsContainer .posts {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+}
+.postsContainer .posts p {
+  padding: 20px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.commentBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0;
+}
+.commentBox img {
+  width: 70px;
+  height: 70px;
+}
+.commentBox .textContainer {
+  padding: 15px 20px 30px 20px;
+  background-color: lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  position: relative;
+}
+.commentBox .textContainer::before {
+  content: "";
+  height: 0;
+  width: 0;
+  border-top: solid transparent 10px;
+  border-left: solid transparent 10px;
+  border-right: solid lightgrey 25px;
+  border-bottom: solid transparent 10px;
+  position: absolute;
+  left: -33px;
+}
+.commentBox .textContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.commentBox .textContainer div h4 {
+  margin: 0 10px 0 0;
 }
 
 footer {
@@ -820,8 +966,8 @@ p {
   background-color: #C3DAB7;
 }
 
-.contactUsForm input, textarea {
-  margin: 50px 10px;
+.contactUsForm input, .commentInfo input, textarea {
+  margin: 50px 0px;
   border: none;
   border-bottom: 1px grey solid;
   font-family: "Open Sans", sans-serif;
@@ -830,13 +976,14 @@ p {
   letter-spacing: 0.3px;
   font-weight: 400;
 }
-.contactUsForm input:focus, textarea:focus {
+.contactUsForm input:focus, .commentInfo input:focus, textarea:focus {
   border-bottom: 3px grey solid;
   outline: none;
 }
 
-form.contactUsFormn input {
-  width: calc(33.3333333333% - 20px);
+form.contactUsForm input, .commentInfo input {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
   padding-bottom: 5px;
 }
 
@@ -845,8 +992,12 @@ textarea {
   resize: none;
 }
 
-button.contactSubmit {
+button.contactSubmit, button {
   margin: 0 0 20px 0;
   padding: 0;
   border-bottom: 1px solid grey;
+}
+
+button.commentSubmit {
+  margin: 0 0 100px 0;
 }

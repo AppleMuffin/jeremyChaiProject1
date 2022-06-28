@@ -15,7 +15,7 @@ nav {
   z-index: 20;
   .wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -37,6 +37,7 @@ h1 {
   flex-basis: 250px;
   text-transform: uppercase;
 }
+
 
 // nav icon styles
 .search, .shop {

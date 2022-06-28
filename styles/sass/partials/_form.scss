@@ -1,6 +1,6 @@
 //form styles start
-.contactUsForm input, textarea {
-  margin: 50px 10px;
+.contactUsForm input, .commentInfo input, textarea {
+  margin: 50px 0px;
   border: none;
   border-bottom: 1px grey solid;
   &:focus {
@@ -10,8 +10,8 @@
   @include bodyStyle;
 }
 
-form.contactUsFormn input {
-  width: calc((100% / 3) - 20px);
+form.contactUsForm input, .commentInfo input {
+  flex-basis: 32%;
   padding-bottom: 5px;
 }
 
@@ -20,10 +20,13 @@ textarea {
   resize: none;
 }
 
-button.contactSubmit {
+button.contactSubmit, button {
   margin: 0 0 20px 0;
   padding: 0;
   border-bottom: 1px solid grey;
 }
 
+button.commentSubmit {
+  margin: 0 0 100px 0;
+}
 //form styles end
