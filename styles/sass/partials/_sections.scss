@@ -71,7 +71,7 @@
   // background-size: cover;
   // background-repeat: no-repeat;
   // padding: 250px 0;
-  // position: relative;
+  position: relative;
   .wrapper {
     width: 100%;
     max-width: 100%;
@@ -81,16 +81,16 @@
       width: 100%;
     }
   }
-    &::after {
-      content: "";
-      width: 1px;
-      height: 8vh;
-      background: lightgrey;
-      position: absolute;
-      right: 50%;
-      bottom: -60px;
-      z-index: 10;
-    }
+  &::after {
+    content: "";
+    width: 1px;
+    height: 100px;
+    background: lightgrey;
+    position: absolute;
+    right: 50%;
+    bottom: -60px;
+    z-index: 10;
+  }
 }
 
 .aboutContainer {
@@ -212,11 +212,13 @@
 // portfolio (drop us a line) section style end
 
 // start contact section style
-.contactHeader .wrapper {
+.contactHeader {
   max-width: 100%;
 
   img {
-    object-fit: contain;
+    object-fit: cover;
+    height: 150px;
+    transition: all 0.2s linear;
   }
 }
 
@@ -226,6 +228,7 @@
   h2 {
     // position: absolute;
     @include headerStyle;
+    transition: 0.2s all linear;
     word-wrap: break-word;
     width: 300px;
     line-height: 3rem;
@@ -233,6 +236,7 @@
     position: relative;
     top: -85px;
     margin: 0;
+    
     &:before {
       content: "";
       position: absolute;
@@ -247,9 +251,11 @@
     font-weight: bolder;
     letter-spacing: 1px;
     padding: 0 0 25px 0;
+    transition: linear 0.2s all;
   }
   >p {
     width: 50%;
+    transition: linear 0.2s all;
   }
 }
 

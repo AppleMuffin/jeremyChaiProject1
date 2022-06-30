@@ -10,6 +10,7 @@
 
 nav {
   position: fixed;
+  background-color: rgb(240, 240, 242);
   width: 100%;
   top: 0px;
   z-index: 20;
@@ -17,6 +18,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    h1 {
+      position: relative;
+      transition: all 0.2s;
+    }
   }
 }
 
@@ -31,12 +37,21 @@ h1 {
 
 
 .navLeft, .navRight {
+  position: relative;
   transition: all 0.3s linear;
+  // top: 0; //make note of this: in order to transition a position you need to define both its starting and end positions (top 0 to top -100 px in media queries)
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-basis: 250px;
   text-transform: uppercase;
+}
+
+.navLeft {
+  left: 0;
+}
+.navRight {
+  right: 0;
 }
 
 

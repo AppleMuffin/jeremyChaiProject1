@@ -308,6 +308,7 @@ a {
 
 nav {
   position: fixed;
+  background-color: rgb(240, 240, 242);
   width: 100%;
   top: 0px;
   z-index: 20;
@@ -322,6 +323,12 @@ nav .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+nav .wrapper h1 {
+  position: relative;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .contactNav {
@@ -334,6 +341,7 @@ h1 {
 }
 
 .navLeft, .navRight {
+  position: relative;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   display: -webkit-box;
@@ -347,6 +355,14 @@ h1 {
   -ms-flex-preferred-size: 250px;
       flex-basis: 250px;
   text-transform: uppercase;
+}
+
+.navLeft {
+  left: 0;
+}
+
+.navRight {
+  right: 0;
 }
 
 .search, .shop {
@@ -384,7 +400,7 @@ h1 {
 .mainHeader::after {
   content: "";
   width: 1px;
-  height: 5vh;
+  height: 100px;
   background: rgb(172, 169, 169);
   position: absolute;
   right: 50%;
@@ -492,6 +508,9 @@ h1 {
   font-size: 2rem;
 }
 
+.aboutProduct {
+  position: relative;
+}
 .aboutProduct .wrapper {
   width: 100%;
   max-width: 100%;
@@ -505,7 +524,7 @@ h1 {
 .aboutProduct::after {
   content: "";
   width: 1px;
-  height: 8vh;
+  height: 100px;
   background: lightgrey;
   position: absolute;
   right: 50%;
@@ -661,12 +680,15 @@ h1 {
   width: 100%;
 }
 
-.contactHeader .wrapper {
+.contactHeader {
   max-width: 100%;
 }
-.contactHeader .wrapper img {
-  -o-object-fit: contain;
-     object-fit: contain;
+.contactHeader img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 150px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .contactDetails .wrapper {
@@ -678,6 +700,8 @@ h1 {
   letter-spacing: 0.9px;
   font-weight: 700;
   text-transform: uppercase;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
   word-wrap: break-word;
   width: 300px;
   line-height: 3rem;
@@ -698,9 +722,13 @@ h1 {
   font-weight: bolder;
   letter-spacing: 1px;
   padding: 0 0 25px 0;
+  -webkit-transition: linear 0.2s all;
+  transition: linear 0.2s all;
 }
 .contactDetails .wrapper > p {
   width: 50%;
+  -webkit-transition: linear 0.2s all;
+  transition: linear 0.2s all;
 }
 
 .contact {
@@ -1009,7 +1037,7 @@ textarea {
   resize: none;
 }
 
-button.contactSubmit, button {
+button.contactSubmit {
   margin: 0 0 20px 0;
   padding: 0;
   border-bottom: 1px solid grey;
@@ -1045,11 +1073,15 @@ button.commentSubmit {
   }
 }
 @media (max-width: 900px) {
-  nav .wrapper .navLeft, nav .wrapper .navRight {
-    position: absolute;
-    -webkit-transition: left 0.2s;
-    transition: left 0.2s;
-    top: 100px;
+  nav .wrapper .navLeft {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    left: -500px;
+  }
+  nav .wrapper .navRight {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    right: -500px;
   }
 
   .aboutContainer .aboutBox {
@@ -1083,6 +1115,91 @@ button.commentSubmit {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     margin: 0 30px;
+  }
+
+  .dropALine .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dropALine .wrapper .textContainer, .dropALine .wrapper .imgContainer {
+    width: 100%;
+  }
+  .dropALine .wrapper .textContainer {
+    height: 500px;
+  }
+
+  .contactHeader img {
+    height: 200px;
+  }
+
+  .contactDetails .wrapper h3, .contactDetails .wrapper p {
+    -webkit-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+    text-align: center;
+    width: 100%;
+  }
+  .contactDetails .wrapper h2 {
+    top: -120px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(211, 211, 211, 0.8);
+  }
+  .contactDetails .wrapper h2::before {
+    display: none;
+  }
+
+  .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact .contactBox i, .contact .contactBox h4 {
+    text-align: center;
+  }
+  .contact .contactBox.address {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+  }
+
+  .commentInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  footer .wrapper .contactBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .wrapper .contactBox .textContainer {
+    padding: 30px 0;
+    text-align: center;
+  }
+  footer .wrapper .contactBox .textContainer h3 {
+    padding: 0 0 15px 0;
+    text-align: center;
+  }
+  footer .wrapper .contactBox .textContainer div.socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px 0 0 0;
   }
 }
 @media (max-width: 500px) {
