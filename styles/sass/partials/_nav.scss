@@ -29,6 +29,7 @@ nav {
 .contactNav {
   background-color: $white;
   position: sticky;
+  overflow: hidden;
 }
 
 .wrapper .hamburgerNav, #openSlideOut {
