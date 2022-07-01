@@ -25,15 +25,31 @@
 @media (max-width: 900px) {
 // index media queries
   nav .wrapper {
+    justify-content: center;
     .navLeft {
       transition: all 0.2s linear;
       left: -500px;
-
+      position: absolute;
+      
+      
     }
     .navRight {
       transition: all 0.2s linear;
       right: -500px;
+      position: absolute;
     }
+  }
+
+  .slideOutNav {
+    font-size: 2rem;
+  }
+
+  .wrapper .hamburgerNav {
+    display: inline;
+      &:checked ~.slideOutNav {
+        left: 0;
+        transition: 3s;
+      }
   }
   
   .aboutContainer {
@@ -123,6 +139,54 @@
   }
   // contact media queries end
 
+  // blog media queries
+  .blog {
+    h2 {
+        text-align: center;
+        line-height: 3rem;
+      }
+  }
+
+  .writerHeading {
+    flex-direction: column;
+    align-items: center;
+    .author {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .articleInformation { 
+    width: 100%;
+    .date, .category, .tags {
+      margin: 15px 0;
+      p {
+        text-align: center;
+      }
+
+    }
+  }
+
+  .relatedPosts {
+    .postsContainer {
+      flex-direction: column;
+      align-items: center;
+      .posts {
+        p {
+          text-align: center;
+          padding: 10px 0 20px 0;
+        }
+      }
+    }
+  }
+
+  .relatedPosts, .comments, .leaveAComment{
+    h2 {
+        line-height: 2rem;
+        text-align: center;
+      }
+  }
+  // blog media queries end
 
   // form media queries 
   .commentInfo {
@@ -152,6 +216,10 @@
 
 @media (max-width: 500px) {
 
+  .slideOutNav {
+      font-size: 1.5rem;
+    }
+    
   .aboutProduct {
     img {
       transition: 0.2s;
@@ -183,4 +251,11 @@
     }
   }
 
+// blog media queries start
+.articleInformation {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+// blog media queries end
 }

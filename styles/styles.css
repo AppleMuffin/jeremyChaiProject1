@@ -336,8 +336,64 @@ nav .wrapper h1 {
   position: sticky;
 }
 
+.wrapper .hamburgerNav, #openSlideOut {
+  display: none;
+  margin: 0 20px 0 0;
+  font-size: 1.2rem;
+}
+.wrapper .hamburgerNav:hover, #openSlideOut:hover {
+  cursor: pointer;
+}
+
+#openSlideOut {
+  opacity: 0;
+}
+#openSlideOut:checked ~ .slideOutNav {
+  left: 0;
+}
+#openSlideOut:hover {
+  cursor: pointer;
+}
+
+.slideOutNav {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2.5rem;
+  position: fixed;
+  left: -1000px;
+  top: 0;
+  background-color: #F6F6F6;
+  max-width: 100%;
+  min-width: 300px;
+  width: 50%;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 50px 10px 50px 50px;
+  z-index: 30;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+.slideOutNav .closeSlideOut {
+  background-color: transparent;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.slideOutNav li a {
+  line-height: 3rem;
+}
+
 h1 {
-  display: inline-block;
+  display: relative;
 }
 
 .navLeft, .navRight {
@@ -788,6 +844,7 @@ h1 {
 .blog h2 {
   margin: 100px 0 20px 0;
   font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 .articleInformation, .author, .writerHeading, .nameBox {
@@ -799,20 +856,24 @@ h1 {
   font-size: 1.1rem;
 }
 
+.articleInformation {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
 .writerHeading, .relatedPosts h2, .comments h2, .leaveAComment h2 {
   border-bottom: 1px solid grey;
   padding: 75px 0 20px 0;
 }
 
-.author {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
-}
 .author img {
   max-width: 25%;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  min-width: 73px;
 }
 .author .nameBox {
   -webkit-box-orient: vertical;
@@ -888,6 +949,7 @@ div.socials p {
 .commentBox img {
   width: 70px;
   height: 70px;
+  margin-right: 30px;
 }
 .commentBox .textContainer {
   padding: 15px 20px 30px 20px;
@@ -1073,15 +1135,35 @@ button.commentSubmit {
   }
 }
 @media (max-width: 900px) {
+  nav .wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   nav .wrapper .navLeft {
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     left: -500px;
+    position: absolute;
   }
   nav .wrapper .navRight {
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     right: -500px;
+    position: absolute;
+  }
+
+  .slideOutNav {
+    font-size: 2rem;
+  }
+
+  .wrapper .hamburgerNav {
+    display: inline;
+  }
+  .wrapper .hamburgerNav:checked ~ .slideOutNav {
+    left: 0;
+    -webkit-transition: 3s;
+    transition: 3s;
   }
 
   .aboutContainer .aboutBox {
@@ -1171,6 +1253,58 @@ button.commentSubmit {
     border-bottom: 2px solid lightgrey;
   }
 
+  .blog h2 {
+    text-align: center;
+    line-height: 3rem;
+  }
+
+  .writerHeading {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .writerHeading .author {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .articleInformation {
+    width: 100%;
+  }
+  .articleInformation .date, .articleInformation .category, .articleInformation .tags {
+    margin: 15px 0;
+  }
+  .articleInformation .date p, .articleInformation .category p, .articleInformation .tags p {
+    text-align: center;
+  }
+
+  .relatedPosts .postsContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .relatedPosts .postsContainer .posts p {
+    text-align: center;
+    padding: 10px 0 20px 0;
+  }
+
+  .relatedPosts h2, .comments h2, .leaveAComment h2 {
+    line-height: 2rem;
+    text-align: center;
+  }
+
   .commentInfo {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1203,6 +1337,10 @@ button.commentSubmit {
   }
 }
 @media (max-width: 500px) {
+  .slideOutNav {
+    font-size: 1.5rem;
+  }
+
   .aboutProduct img {
     -webkit-transition: 0.2s;
     transition: 0.2s;
@@ -1238,5 +1376,16 @@ button.commentSubmit {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     width: 50%;
+  }
+
+  .articleInformation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
   }
 }
