@@ -659,7 +659,6 @@ h1 {
   position: relative;
   -ms-flex-preferred-size: 560px;
       flex-basis: 560px;
-  height: 270px;
   background-color: #F6F6F6;
   margin: 10px;
 }
@@ -695,7 +694,6 @@ h1 {
   -webkit-box-flex: 0;
       -ms-flex: 0 2 270px;
           flex: 0 2 270px;
-  margin: 10px;
 }
 
 .dropALine .wrapper {

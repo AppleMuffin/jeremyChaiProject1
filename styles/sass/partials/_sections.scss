@@ -67,10 +67,6 @@
 
 // about product styling start
 .aboutProduct {
-  // background-image: url(../assets/home-4.jpeg);
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // padding: 250px 0;
   position: relative;
   .wrapper {
     width: 100%;
@@ -140,18 +136,17 @@
 .teamContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; //space around would increase the margins and make the tile misaligned from the grid
-  max-width: 1160px; //a picture is 270px, margin of 10px was added on left and right = 290px, 4 tiles max per row as seen on the example = 270+20=290*4=1160px. team container is set at this width so only 4 tiles max can be on a row
+  justify-content: center; 
+  max-width: 1160px; 
   margin-bottom: 40px;
   
   .teamPlayers {
-    position: relative; //instead of using flexbox to align a single element, learn how to do it otherwise (google hot to center text vertically)
-    flex-basis: calc(2 * 270px + 20px); //according to the example, this section is 2 tiles long PLUS their margin therefore 270px * 2 + 20px. this will give it exactly the space of two tiles
-    height: 270px;
+    position: relative; 
+    flex-basis: calc(2 * 270px + 20px); 
     background-color: $whiteTwo;
     margin: 10px;
     .textBlurb {
-      padding: 25px 25px; //more text aligning without flexbox
+      padding: 25px 25px; 
       position: absolute;
       bottom: 0;
       h3 {
@@ -161,7 +156,7 @@
   }
   .workWithUs {
     display: flex;
-    flex-basis: 270px; //try avoiding flex to align text vertically.
+    flex-basis: 270px; 
     height: 270px;
     text-transform: uppercase;
     align-items: center;
@@ -174,8 +169,7 @@
     // conclusion -> margin, flexbasis and max-width are important for getting specific pixel perfect alignments (alongside calc())
   }
   .imgContainer {
-    flex: 0 2 270px; //grow/shrink/flex-basis. shrink isnt really used here because its preferred to have less photos per row rather than have photos shrink and be difficult to see
-    margin: 10px;
+    flex: 0 2 270px; 
   }
 }
 
@@ -284,7 +278,7 @@
 
 .contactBox.address {
   border-left: 2px solid lightgrey;
-  border-right: 2px solid lightgrey; //could go back and do ::before and ::after
+  border-right: 2px solid lightgrey; 
 
 }
 // end contact section style

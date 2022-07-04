@@ -1,7 +1,7 @@
 .skip-link {
   position: absolute;
-  left: -1000px; //take it off the screen
-  top: 5px; //bring it off the edge of the screen
+  left: -1000px;
+  top: 5px; 
   z-index: 10;
   &:focus {
     left: 0;
@@ -88,7 +88,6 @@ h1 {
 .navLeft, .navRight {
   position: relative;
   transition: all 0.3s linear;
-  // top: 0; //make note of this: in order to transition a position you need to define both its starting and end positions (top 0 to top -100 px in media queries)
   display: flex;
   justify-content: space-around;
   align-items: center;
