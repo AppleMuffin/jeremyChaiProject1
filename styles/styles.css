@@ -296,6 +296,14 @@ a {
   color: inherit;
 }
 
+button {
+  -webkit-transition: color linear 0.2s;
+  transition: color linear 0.2s;
+}
+button:hover {
+  color: grey;
+}
+
 .skip-link {
   position: absolute;
   left: -1000px;
@@ -346,14 +354,17 @@ nav .wrapper h1 {
   cursor: pointer;
 }
 
-#openSlideOut {
-  opacity: 0;
+i.navButton {
+  display: none;
+  margin-right: 20px;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
-#openSlideOut:checked ~ .slideOutNav {
-  left: 0;
-}
-#openSlideOut:hover {
+i.navButton:hover {
   cursor: pointer;
+  color: grey;
+  font-size: 1.3rem;
 }
 
 .slideOutNav {
@@ -371,7 +382,7 @@ nav .wrapper h1 {
           flex-direction: column;
   font-size: 2.5rem;
   position: fixed;
-  left: -5000px;
+  left: -2000px;
   top: 0;
   background-color: #F6F6F6;
   max-width: 100%;
@@ -388,6 +399,13 @@ nav .wrapper h1 {
   background-color: transparent;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.slideOutNav .closeSlideOut:hover {
+  cursor: pointer;
+  color: grey;
+  font-size: 1.6rem;
 }
 .slideOutNav li a {
   line-height: 3rem;
@@ -420,14 +438,37 @@ h1 {
 
 .navRight {
   right: 0;
+  position: relative;
 }
 
 .search, .shop {
   background-color: transparent;
   border: none;
+  -webkit-transition: 0.2s color linear;
+  transition: 0.2s color linear;
 }
 .search i, .shop i {
   font-size: 0.9rem;
+}
+.search:hover, .shop:hover {
+  color: grey;
+}
+
+.searchIcon:active, .shopIcon:active {
+  font-size: 0.8rem;
+}
+
+.searchBar {
+  font-size: 1rem;
+  position: absolute;
+  top: -100px;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  font-family: "Open Sans";
+  z-index: 40;
+}
+.searchBar input {
+  z-index: 40;
 }
 
 .shop {
@@ -739,6 +780,7 @@ h1 {
 
 .contactHeader {
   max-width: 100%;
+  position: relative;
 }
 .contactHeader img {
   -o-object-fit: cover;
@@ -832,6 +874,28 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.submitNotice {
+  display: none;
+  position: fixed;
+  right: calc(50% - 150px);
+  top: calc(50% - 100px);
+  background-color: #C3DAB7;
+  padding: 20px;
+  height: 200px;
+  width: 300px;
+  border-radius: 5%;
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+.submitNotice p {
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
 }
 
 .blog h2, .comments h2, .leaveAComment h2, .relatedPosts h2 {
@@ -1153,20 +1217,12 @@ button.commentSubmit {
     right: -500px;
     position: absolute;
   }
-
   .slideOutNav {
     font-size: 2rem;
   }
-
-  .wrapper .hamburgerNav {
+  i.navButton {
     display: inline;
   }
-  .wrapper .hamburgerNav:checked ~ .slideOutNav {
-    left: 0;
-    -webkit-transition: 3s;
-    transition: 3s;
-  }
-
   .aboutContainer .aboutBox {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -1174,14 +1230,12 @@ button.commentSubmit {
         flex-basis: 80%;
     margin: 0 auto;
   }
-
   .aboutProduct img {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     opacity: 1;
     height: 1100px;
   }
-
   .info .wrapper {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1193,13 +1247,11 @@ button.commentSubmit {
     -webkit-transition: 0.2s;
     transition: 0.2s;
   }
-
   .branding .wrapper .brandingInfoParent .textContainer {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     margin: 0 30px;
   }
-
   .dropALine .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1212,11 +1264,9 @@ button.commentSubmit {
   .dropALine .wrapper .textContainer {
     height: 500px;
   }
-
   .contactHeader img {
     height: 200px;
   }
-
   .contactDetails .wrapper h3, .contactDetails .wrapper p {
     -webkit-transition: 0.2s linear all;
     transition: 0.2s linear all;
@@ -1232,7 +1282,6 @@ button.commentSubmit {
   .contactDetails .wrapper h2::before {
     display: none;
   }
-
   .contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1253,12 +1302,10 @@ button.commentSubmit {
     border-top: 2px solid lightgrey;
     border-bottom: 2px solid lightgrey;
   }
-
   .blog h2 {
     text-align: center;
     line-height: 3rem;
   }
-
   .writerHeading {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1276,7 +1323,6 @@ button.commentSubmit {
         -ms-flex-pack: center;
             justify-content: center;
   }
-
   .articleInformation {
     width: 100%;
   }
@@ -1286,7 +1332,6 @@ button.commentSubmit {
   .articleInformation .date p, .articleInformation .category p, .articleInformation .tags p {
     text-align: center;
   }
-
   .relatedPosts .postsContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1300,19 +1345,16 @@ button.commentSubmit {
     text-align: center;
     padding: 10px 0 20px 0;
   }
-
   .relatedPosts h2, .comments h2, .leaveAComment h2 {
     line-height: 2rem;
     text-align: center;
   }
-
   .commentInfo {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-
   footer .wrapper .contactBox {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1341,7 +1383,6 @@ button.commentSubmit {
   .slideOutNav {
     font-size: 1.5rem;
   }
-
   .aboutProduct img {
     -webkit-transition: 0.2s;
     transition: 0.2s;
@@ -1363,7 +1404,6 @@ button.commentSubmit {
   .aboutProduct .aboutContainer .aboutBox h2 {
     text-align: center;
   }
-
   .branding .wrapper .brandingInfoParent {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1378,7 +1418,6 @@ button.commentSubmit {
     transition: 0.2s;
     width: 50%;
   }
-
   .articleInformation {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

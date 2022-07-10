@@ -214,11 +214,13 @@
 // start contact section style
 .contactHeader {
   max-width: 100%;
-
+  position: relative;
+  
   img {
     object-fit: cover;
     height: 150px;
     transition: all 0.2s linear;
+    
   }
 }
 
@@ -298,6 +300,23 @@
 .commentInfo {
   display: flex;
   justify-content: space-between;
+}
+
+.submitNotice {
+  display: none;
+  position: fixed;
+  right: calc(50% - 150px);
+  top: calc(50% - 100px);
+  background-color: $lightSage;
+  padding: 20px;
+  height: 200px;
+  width: 300px;
+  border-radius: 5%;
+  transition: all linear 0.2s;
+  p {
+    padding: 10px;
+    @include bodyStyle;
+  }
 }
 // get in touch section end
 

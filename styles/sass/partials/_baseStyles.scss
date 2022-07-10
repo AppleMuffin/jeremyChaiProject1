@@ -27,3 +27,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+button {
+  transition: color linear 0.2s;
+  &:hover {
+    color: grey;
+  }
+}

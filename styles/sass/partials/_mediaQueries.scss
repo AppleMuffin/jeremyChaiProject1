@@ -44,12 +44,16 @@
     font-size: 2rem;
   }
 
-  .wrapper .hamburgerNav {
+  // .wrapper .hamburgerNav {
+  //   display: inline;
+  //     &:checked ~.slideOutNav {
+  //       left: 0;
+  //       transition: 3s;
+  //     }
+  // }
+
+  i.navButton {
     display: inline;
-      &:checked ~.slideOutNav {
-        left: 0;
-        transition: 3s;
-      }
   }
   
   .aboutContainer {

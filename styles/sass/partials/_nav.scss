@@ -41,15 +41,29 @@ nav {
     }
 }
 
-#openSlideOut {
-  opacity: 0;
-  &:checked ~ .slideOutNav {
-    left: 0;
-  }
+// #openSlideOut {
+//   opacity: 0;
+//   &:checked ~ .slideOutNav {
+//     left: 0;
+//   }
+//   &:hover {
+//     cursor: pointer;
+//   }
+// }
+// commented out the checkbox slideout so js can replace it
+
+i.navButton {
+  display: none;
+  margin-right: 20px;
+  font-size: 1.2rem;
+  transition: all 0.2s linear;
   &:hover {
     cursor: pointer;
+    color: grey;
+    font-size: 1.3rem;
   }
 }
+
 
 .slideOutNav {
   @include bodyStyle;
@@ -57,7 +71,7 @@ nav {
   flex-direction: column;
   font-size: 2.5rem;
   position: fixed;
-  left: -5000px;
+  left: -2000px;
   top:0;
   background-color: $whiteTwo;
   max-width: 100%;
@@ -71,6 +85,12 @@ nav {
   .closeSlideOut {
     background-color: transparent;
     align-self: flex-end;
+    transition: all 0.2s linear;
+    &:hover {
+      cursor: pointer;
+      color: grey;
+      font-size: 1.6rem;
+    }
   }
   li a{
     line-height: 3rem;
@@ -101,6 +121,7 @@ h1 {
 }
 .navRight {
   right: 0;
+  position: relative;
 }
 
 
@@ -108,11 +129,33 @@ h1 {
 .search, .shop {
   background-color: transparent;
   border: none;
+  transition: 0.2s color linear;
   i {
     font-size: 0.9rem;
   }
+  &:hover {
+    color: grey;
+  }
 }
 
+.searchIcon, .shopIcon {
+  &:active {
+    font-size: 0.8rem;
+  }
+}
+
+.searchBar {
+  font-size: 1rem;
+  position: absolute;
+  top: -100px;
+  transition: 0.2s all linear;
+  font-family: 'Open Sans';
+  z-index: 40;
+    input {
+      z-index: 40;
+    }
+
+}
 .shop {
   position: relative;
   display: flex;
