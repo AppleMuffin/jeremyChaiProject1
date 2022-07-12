@@ -2,7 +2,7 @@ const navButton = document.querySelector('.navButton');
 const closeNav = document.querySelector('.closeSlideOut');
 const slideOutNav = document.querySelector('div.slideOutNav');
 
-//toggle nav slideout open and close
+//toggle nav slideout open and close (need to shrink the window width to see hamburger/x button)
 navButton.addEventListener('click', (event) => {
   navToggle(event);
 });
